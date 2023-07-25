@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>From pattern attibutes testing</h1>
+    <hr>
+    <form action="form-echo.php" method="get">
+        Slide 33 Exmple:
+        <input type="text" name="username" placeholder="Username" pattern="[a-z]{1,15}"
+            title="Username should only contain lower caes letter. e.g. john">
+
+        <h3>1. เป็นสระในภาษาอังกฤษเท่านั้นและมีได้ 3 ตัว</h3>
+
+        <input type="text" name="tree-english" placeholder="3 english only" pattern="(a|e|i|o|u|A|E|I|O|U){3}"
+            title="Input 3 english only">
+
+        <h3>2. ขึ้นต้นด้วยตัวพิมพ์ใหญ่ ที่เหลือเป็นอักษรพิมพ์เล็กตั้งแต่ 1 ตัวขึ้นไป</h3>
+
+        <input type="text" name="one-big" placeholder="Xx..." pattern="[A-Z]{1}[a-z]+"
+            title="input one bif letter and morethan one small lecture">
+
+        <h3>3. ขึ้นต้นคำด้วย ord หรือ order ลงท้ายด้วยตัวเลข 5 ตัว</h3>
+
+        <input type="text" name="ord-order" placeholder="ord/ordernnnnn" pattern="^(ord|order)[$0-9]{5}"
+            title="start only ord or odrer">
+
+        <h3>4. เป็นคำว่า frog หรือ blog หรือ clog เท่านั้น</h3>
+
+        <input type="text" name="fbc-log" placeholder="frog/blog/clog" pattern="(frog|blog|clog)"
+            titlr="Input only frog blog clog">
+
+        <h3>BONUS. เป็นรหัสนักศึกษา cs เท่านั้น</h3>
+
+        <input type="text" name="bonus" placeholder="xx-xxxxxx-xxxx-x" pattern="[0-9]{2}-040626-[0-9]{4}-[0-9]{1}"
+            title="Input studentId">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>

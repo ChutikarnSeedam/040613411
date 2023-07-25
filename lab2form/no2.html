@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input type</title>
+</head>
+<body>
+    <h1>แบบฟอร์มจองทัวร์</h1>
+
+    <fieldset>
+    <form action="form-echo.php" method="get">
+        <fieldset>
+        <legend>ข้อมูลทั่วไป</legend>
+        ชื่อ-สกุล: <br>
+        <input type="text" name="fname_lname" placeholder="กรอกชื่อ-สกุล" 
+            pattern="[A-Za-z]+" title="have to insert morethn 1 letter">*
+        <br>
+        Email : 
+        <br>
+        <input type="text" name="email" pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$" title="have to insert xxxx@email.com">*
+        <br>
+        โทรศัพท์
+        <input type="text" name="phone" value="66+" pattern="[66+ |(0-9)]{8}" title="insert phone number for 8 number">*
+        <br>
+        ที่อยู่ : <br>
+        <textarea type="text" name="address"  rows="4" cols="50" ></textarea>
+        <br>
+        รหัสไปรษณีย์ :
+        <input type="text" name="postalcode" size="5" pattern="[0-9]{5}">
+        <br>
+        รูปผู้จอง : 
+        <input type="file" value="Choose File">
+        </fieldset>
+    <br>
+            <fieldset>
+                <legend>ข้อมูลการเข้าสู่ระบบ</legend>
+                    Username: <br>
+                    <input type="text" name="username" pattern="[A-Za-z0-9_]{8,}"
+                        title="have to insret letter , number or _ morethan 8 letter">
+                    <br> ประด้วยตัวเลข ตัวอักษร หรือ _ตั้งแต่ 8 ตัวขึ้นไป 
+                    <br>
+                    Password: <br>
+                    <input type="password" name="password" pattern="[A-Za-z0-9]{8,}" 
+                        title="have to insert morethan 8 letter">
+                    <br> ประกอบด้วยตัวอะไรก้ได้ 8 ตัวขึ้นไป
+            </fieldset>
+        <br>
+            <fieldset>
+                <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            <label>แพคเก็จทัวร์ : 
+                    <select name="tour_packet">
+                        <option value="thailand">Thailand</option>
+                        <option value="japan">Japan</option>
+                        <option value="korea">Korea</option>
+                        <option value="london">Landon</option>
+                        <option value="american">American</option>
+                    </select>
+                </label>
+                <br>
+                <label>วันที่เดินทาง:</label> <input type="date" name="datetoure">
+                <br>
+                <label>จำนวนผู้เดินทาง:
+                    <input type="number" name="many" min="1" max="10">
+                </label>
+                <br>
+                <label>เน้นการท่องเที่ยวแบบใด ?
+                    <br>
+                    <input type="checkbox" name="format" value="ชอปปิ้ง">ชอปปิ้ง
+                    <input type="checkbox" name="format" value="ธรรมชาติ">ธรรมชาติ
+                    <input type="checkbox" name="format" value="ทะเล">ทะเล
+                </label>
+        </fieldset>
+        <br>
+        <label>
+            ยอมรับเงื่อนไขและข้อตกลง 
+            <input type="radio" name="provision" value="agree" checked="checked">I agree
+            <input type="radio" name="provision" value="disagree">I disagree
+        </label>
+            <input type="submit" value="จอง">
+        </fieldset>
+    </form>
+</body>
+</html>
