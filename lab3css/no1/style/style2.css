@@ -1,0 +1,19 @@
+h1>cite{
+    font: bold;
+    color: red;
+}
+
+p {
+    font: bold;
+}
+
+.country {
+    font-weight: bold;
+    color: green;
+}
+
+section>header+p::first-letter {font-size : 24px; font-weight: bold;}
+
+section {
+    border-bottom: 1px solid;
+}
