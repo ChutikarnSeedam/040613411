@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<style>          
+        .menu {
+		    background-color: black;
+		    color: white;
+		    text-align: center;
+		}
+        .content {
+		    background-color: gainsboro;
+		}
+		.ads {
+		    background-color: cornflowerblue;
+		}          
+        @media (min-width : 480px) {
+		    .menu {
+		    	width: 30%;
+		    }
+		    .content {
+		    	width: 60%;
+		    }
+		    .ads {
+		    	width: 10%;
+		    }
+            .flex {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+		@media (max-width : 480px) {
+			.menu { 
+                font-size: 32px;
+                color: blue;
+                width: auto; 
+            }
+			.content { 
+                width: auto; 
+            }
+			.ads { 
+                width: auto; 
+            }
+            .flex {
+                display: flex;
+                flex-direction: column;
+            }
+		}
+	</style>
+</head>
+<body>
+    <div class="flex">
+        <div class="menu">Menu1</div>
+        <div class="content">In publishing, art, and communication, … as speech, writing or any of various arts".</div>
+        <div class="ads">advertising</div>
+    </div>
+    <div class="flex">
+        <div class="menu">Menu2</div>
+        <div class="content">Content Menu2.</div>
+        <div class="ads">advertising2</div>
+    </div>
+    <div class="flex">
+        <div class="menu">Menu3</div>
+        <div class="content">Content Menu3.</div>
+        <div class="ads">advertising3</div>
+    </div>
+</body>
+</html>
