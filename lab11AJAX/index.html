@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sarabun">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+    * {
+        font-family: 'Sarabun', sans-serif;
+    }
+</style>
+<body>  
+    <div>
+        Search Engine
+    </div>
+    <div>
+        <form id="form">
+            <input type="text" id="name" placeholder="ค้นหา" />
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+
+        function showResult() {
+            if (request.readyState == 4) {
+                if (request.status == 200)
+                    document.getElementById("result").innerHTML = request.responseText;
+            }
+        }
+
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var inputName = document.getElementById("name");
+
+            console.log(inputName.value);
+
+            if (inputName.value !== "") {
+                request = new XMLHttpRequest();
+                request.onreadystatechange = showResult;
+
+                var url= "http://localhost/server.php?name=" + inputName.value;
+
+                request.open("GET", url, true);
+                request.send(null);
+            }
+            document.getElementById("result").innerHTML = "Missing Params";
+        });
+    </script>
+</body>
